@@ -1,14 +1,17 @@
-import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Sidebar from "./_layouts/Sidebar";
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element:<Sidebar style="" toggle={()=>(
+      console.log("toggle")
+    )}/>,
+  }
+])
 
-  return (
-    <>
-     <div className='text-red-500'>
-      Welcome
-     </div>
-    </>
-  )
+const App = () =>{
+  return <RouterProvider router={router} />
 }
 
-export default App
+export default App;
