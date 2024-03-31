@@ -16,8 +16,7 @@ function ProfileDropdown({
   }
   
   const handleClick = () => {
-   
-    
+  
   };
 
   return (

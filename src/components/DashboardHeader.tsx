@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { HiXMark } from "react-icons/hi2";
 import Avatar from "../assets/avatar.png";
-import Logo from '../assets/logo.png'
-import Sidebar from "../_layouts/Sidebar";
+import Logo from "../assets/logo.png";
+import Sidebar from "../layouts/Sidebar";
 import ProfileDropdown from "./ProfileDropdown";
 import { FaAngleDown } from "react-icons/fa";
 import { HiBars3 } from "react-icons/hi2";
@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 function DashHeader() {
   const [showProfileDropdown, setShowprofileDropdown] = useState(false);
-  
+
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
   const handleShowProfileDropdown = () =>
@@ -26,9 +26,11 @@ function DashHeader() {
           handleShowProfileDropdown={handleShowProfileDropdown}
         />
       )}
-          <div className={`h-[11vh] border-b-4 border-b-primary ${
-            nav ? '' :''
-          } z-30 w-full lg:w-4/5 lg:ml-[20%] shadow-sm  bg-gray-100  dark:bg-dark-bg fixed border-b`}>
+      <div
+        className={`h-[11vh] border-b-4 border-b-skyBlue ${
+          nav ? "" : ""
+        } z-30 w-full lg:w-4/5 lg:ml-[20%] shadow-sm  bg-gray-100  fixed border-b`}
+      >
         <div className="px-3 flex items-center  w-full h-full">
           <div className="flex px-5 lg:hidden">
             <div
@@ -38,9 +40,9 @@ function DashHeader() {
               tabIndex={0}
             >
               {!nav ? (
-                <HiXMark className="w-7 dark:text-dark-text-fill" />
+                <HiXMark className="w-7 " />
               ) : (
-                <HiBars3 className="w-7 dark:text-dark-text-fill" />
+                <HiBars3 className="w-7 " />
               )}
             </div>
           </div>
@@ -51,30 +53,26 @@ function DashHeader() {
                 src={Logo}
                 alt="logo"
               />
-              <h1 className="text-lg mt-2 font-bold font-lexend text-primary dark:text-dark-text-fill">
-              </h1>
+              <h1 className="text-lg mt-2 font-bold font-lexend text-primary "></h1>
             </Link>
           </div>
-           
-          <div onClick={handleShowProfileDropdown} className="ml-auto mr-10 flex ">
+
+          <div
+            onClick={handleShowProfileDropdown}
+            className="ml-auto mr-10 flex "
+          >
             <span className="mr-2 text-lg font-semibold cursor-pointer">
-               {user.firstname}
+              {user.firstname}
             </span>
             <img
               className="w-8 cursor-pointer mr-auto"
               src={Avatar}
               alt="avatar"
             />
-            <FaAngleDown className="mt-[10px] ml-2"/>
+            <FaAngleDown className="mt-[10px] ml-2" />
           </div>
         </div>
-        <ul
-          className={
-            !nav
-              ? "hidden"
-              : "bg-white dark:bg-dark-bg cursor-pointer lg:hidden"
-          }
-        >
+        <ul className={!nav ? "hidden" : "bg-white  cursor-pointer lg:hidden"}>
           <Sidebar toggle={handleClick} style="flex" />
         </ul>
       </div>
