@@ -1,9 +1,9 @@
-import { useEffect, useContext, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { loginFields } from "../constants/formFields";
 import Input from "../components/Input";
-import { UserContext } from "../hooks/useAuth";
+// import { UserContext } from "../hooks/useAuth";
 
 import logo from "../assets/logo.png";
 
@@ -20,9 +20,7 @@ loginFields.forEach((field) => {
 });
 
 const Login = () => {
-  const navigate = useNavigate();
-  const { login } = useContext(UserContext);
-  const location = useLocation();
+
 
   const [loginState, setLoginState] = useState(fieldState);
 

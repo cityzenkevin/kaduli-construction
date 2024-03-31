@@ -1,6 +1,4 @@
-import NavBar from "../layouts/Navbar";
-import banner from "../assets/banner.png";
-import Footer from "../layouts/Footer";
+
 const Reviews = () => {
   return (
     <div className="">

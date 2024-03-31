@@ -1,7 +1,6 @@
 import NavBar from "../layouts/Navbar";
 import banner from "../assets/banner.png";
 import Footer from "../layouts/Footer";
-import Reviews from "./Reviews";
 import Carousel from "../components/Carousel";
 const Homepage = () => {
  

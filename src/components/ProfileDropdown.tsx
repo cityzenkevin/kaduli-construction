@@ -1,7 +1,5 @@
-import { useContext } from "react";
 import { FaSignOutAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { UserContext } from "../hooks/useAuth";
 
 function ProfileDropdown({
   handleShowProfileDropdown,

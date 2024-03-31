@@ -19,7 +19,7 @@ userFields.forEach((field) => {
 export default function Properties() {
   let [addModal, setAddModal] = useState(false);
   let [isRemoveOpen, setIsRemoveOpen] = useState(false);
-  let [isEditOpen, setIsEditOpen] = useState(false);
+  // let [isEditOpen, setIsEditOpen] = useState(false);
   const [selectedOrg, setselectedOrg] = useState<any>(fieldState);
 
   const loading = false;
@@ -31,9 +31,9 @@ export default function Properties() {
     setIsRemoveOpen(!isRemoveOpen);
   };
 
-  const handleEditModal = () => {
-    setIsEditOpen(!isEditOpen);
-  };
+  // const handleEditModal = () => {
+  //   setIsEditOpen(!isEditOpen);
+  // };
 
   useEffect(() => {}, []);
 

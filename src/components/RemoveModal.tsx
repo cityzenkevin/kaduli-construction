@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { toast } from "react-toastify";
 
 import Modal from "./Modal";
@@ -15,8 +17,8 @@ interface Props<T> {
 const RemoveModal = <T extends {}>({
   isOpen,
   onClose,
-  onDelete,
-  entity,
+  // onDelete,
+  // entity,
   message,
   title,
   onFetch,
